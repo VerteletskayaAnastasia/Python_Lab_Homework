@@ -1,15 +1,15 @@
 # TODO  Напишите функцию count_letters
 def count_letters(text):
-    dict= {}
-    text=text.lower()
+    dict = {}
+    text = text.lower()
     text = text.split()
     text = ''.join(text)
-    for i in range(len(text)):
-            if text[i].isalpha() == True:
-                if text[i] not in dict:
-                    dict[text[i]]= 1
-                else:
-                    dict[text[i]]+=1
+    for i in text:
+        if i.isalpha():
+            if i not in dict:
+                dict[i] = 1
+            else:
+                dict[i] += 1
     return dict
 
 # TODO Напишите функцию calculate_frequency
