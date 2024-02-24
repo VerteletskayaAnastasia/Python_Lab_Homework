@@ -1,5 +1,5 @@
 
-class Student_group:
+class StudentGroup:
     def __init__(self, quantity: int, average_age: float, avarage_height: float):
         """ Класс, описывающий объект Группа студентов
 
@@ -42,7 +42,7 @@ class Student_group:
             Функция, которая определяет примерный суммарный рост всех студентов группы.
             :return: Общее значение роста
             Примеры:
-            >>> group = Student_group(20, 21.5, 189.3)
+            >>> group = StudentGroup(20, 21.5, 189.3)
             >>> group.total_height()
             """
         def total_age(self) -> float:
@@ -50,10 +50,10 @@ class Student_group:
             Функция, которая определяет примерный суммарный возраст всех студентов группы.
             :return: Общее значение возраста
             Примеры:
-            >>> group = Student_group(20, 21.5, 189.3)
+            >>> group = StudentGroup(20, 21.5, 189.3)
             >>> group.total_age()
             """
-class Student(Student_group):
+class Student(StudentGroup):
     def __init__(self,quantity: int, average_age: float, avarage_height: float, age: int, height: float):
         """ Класс, описывающий объект Студент в группе
 
@@ -82,5 +82,13 @@ class Student(Student_group):
             """ Метод repr,  возвращающий колличество, средний возраст и рост студентов в группе, возраст и рост заданного студента в группе"""
             return f"{self.__class__.__name__}(_quantity={self._quantity!r}, average_age={self.average_age!r},avarage_height={self.avarage_height!r},age={self.age!r},height={self.height!r})"
 
+        def total_height(self) -> float:
+            """
+            Функция, которая определяет примерный суммарный рост всех студентов группы. И оуенивает каким бы был общий рост без указанного студента.
+            :return: Общее значение роста без указанного студента
+            Примеры:
+            >>> group = Student(20, 21.5, 189.3)
+            >>> group.total_height()
+            """
 if __name__ == "__main__":
     pass
