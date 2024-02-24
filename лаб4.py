@@ -80,7 +80,7 @@ class Student(Student_group):
 
         def __repr__(self):
             """ Метод repr,  возвращающий колличество, средний возраст и рост студентов в группе, возраст и рост заданного студента в группе"""
-            return f"{self.__class__.__name__}(_quantity={self._quantity!r}, average_age={self.average_age!r},avarage_height={avarage_height!r},age={self.age!r},height={self.height!r})"
+            return f"{self.__class__.__name__}(_quantity={self._quantity!r}, average_age={self.average_age!r},avarage_height={self.avarage_height!r},age={self.age!r},height={self.height!r})"
 
 if __name__ == "__main__":
     pass
